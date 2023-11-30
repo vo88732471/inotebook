@@ -10,7 +10,7 @@ const AddNote = () => {
     const onChange=(e) =>{
         setNote((p)=>({...p,[e.target.name]: e.target.value}));
        }
-       
+      
     const handleClick =(e)=>{
        e.preventDefault();
       addNote(note.title,note.description,note.tag);
