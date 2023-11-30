@@ -27,7 +27,7 @@ navigate('/')
         }
         else{
           alert("Incorrect Credentials");
-          setCredentials({email:"",password:""});
+          // setCredentials({email:"",password:""});
         }
     }
 
