@@ -20,7 +20,7 @@ const NoteState = (props) => {
         });
 
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         setNotes(json)
     }
 
@@ -37,11 +37,9 @@ const NoteState = (props) => {
             },
             body: JSON.stringify({ title, description, tag })
         });
-
+        // eslint-disable-next-line
         const json = await response.json();
-        console.log(json)
-        //   setNotes((prev)=>({...p,{title,description,tag}));
-        // setNotes((prev) => [...prev, { title, description, tag }]);
+       
         await getNotes();
     }
 
@@ -57,8 +55,9 @@ const NoteState = (props) => {
 
             }
         });
+        // eslint-disable-next-line
         const json = await response.json();
-        console.log(json)
+        // console.log(json)
 
         const newNote = notes.filter((note) => {
             return note._id !== id;
@@ -79,8 +78,9 @@ const NoteState = (props) => {
 
             body: JSON.stringify({ title, description, tag }),
         });
+        // eslint-disable-next-line
         const json = await response.json();
-        console.log(json)
+        // console.log(json)
 
         //Logic to show on website
         let newNote = JSON.parse(JSON.stringify(notes))

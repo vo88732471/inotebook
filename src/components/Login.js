@@ -18,7 +18,7 @@ function Login() {
           });
         
         const json= await response.json();
-        console.log(json)
+        // console.log(json)
 
         if(json.success){
 //save the auth token and redirect
