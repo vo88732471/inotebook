@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 var fetchuser = require("../middleware/fetchuser")
 
 const JWT_SECRET = 'mynamevivek'
+
 //ROUTE 1:create a user using POST "api/auth/createuser". no login required
 router.post('/createuser', [
     body('email').isEmail(),
@@ -18,6 +19,7 @@ router.post('/createuser', [
     if (!errors.isEmpty()) {
         return res.status(400).json({ success, "errors": errors.array() });
     }
+    
     //check whether the user with this email exists already
     try {
         let user = await User.findOne({ email: req.body.email })

@@ -18,25 +18,29 @@ const AddNote = () => {
     }
    
   return (
-    <div className='container my-3'>
+    <div className="container v-100" >
+        <div className="shadow bg-light"> 
+        <div className='m-4 p-4'>
     <h2>Add a Note</h2>
        <form className='container my-3'>
   <div className="mb-3">
-    <label htmlFor="title" className="form-label">Title</label>
-    <input type="text" className="form-control" id="title"  name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required/>
+    <label htmlFor="title" className="form-label fw-bold">Title</label>
+    <input type="text" className="form-control border" id="title"  name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required/>
    
   </div>
   <div className="mb-3">
-    <label htmlFor="description" className="form-label">Description</label>
-    <input type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange} minLength={5} required />
+    <label htmlFor="description " className="form-label fw-bold">Description</label>
+    <textarea type="text" className="form-control border" id="description" name="description" rows="3" value={note.description} onChange={onChange} minLength={5} required />
   </div>
   <div className="mb-3">
-    <label htmlFor="tag" className="form-label">Tag</label>
-    <input type="text" className="form-control" id="tag"  name="tag" value={note.tag} onChange={onChange} />
+    <label htmlFor="tag" className="form-label fw-bold">Tag</label>
+    <input type="text" className="form-control border" id="tag"  name="tag" value={note.tag} onChange={onChange} />
   </div>
   
-  <button type="button" disabled={note.title.length<5 || note.description.length<5} className="btn btn-primary" onClick={handleClick}>Add Note</button>
+  <button type="button" disabled={note.title.length<5 || note.description.length<5} className="btn btn-warning" onClick={handleClick}>Add Note</button>
 </form>
+</div>
+</div>
 </div>
   )
 }
