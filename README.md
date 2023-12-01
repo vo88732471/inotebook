@@ -4,12 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demonstration
 
-#### Home Page :
-
-<!-- ![natoursHomePage](https://github.com/NachiketaDhal/Natours-API/blob/master/public/Screenshots/Home.png | width=640) -->
-<img src="https://github.com/Deepak-Meena-github/Natours-APP/blob/main/public/%20%20%20%20Screenshots/HomePage.png" width="640">
-
-
 #### LOGIN PAGE :
 
 <!-- ![login](https://github.com/NachiketaDhal/Natours-API/blob/master/public/Screenshots/Login.png | width=640) -->
