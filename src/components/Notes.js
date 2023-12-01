@@ -45,11 +45,8 @@ export const Notes = () => {
       <AddNote />
       <br />
       <hr />
-<<<<<<< HEAD
-      <button type="button" ref={ref} className="btn btn-warning d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-=======
+
       {/* <button type="button" ref={ref} className="btn btn-warning d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
->>>>>>> new_feature
         Launch demo modal
       </button> */}
       <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
