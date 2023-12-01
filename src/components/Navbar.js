@@ -26,10 +26,10 @@ const Navbar = () => {
         </li>
       </ul>
     {!localStorage.getItem('token')?<div className='d-flex'>
-      <Link className='btn btn-primary mx-1' to='/login' role='button'>Login</Link>
-      <Link className='btn btn-primary mx-1' to='/signup' role='button'>SignUp</Link>
+      <Link className='btn btn-outline-success mx-1' to='/login' role='button'>Login</Link>
+      <Link className='btn btn-outline-success mx-1' to='/signup' role='button'>SignUp</Link>
       </div>:
-      <Link className='btn btn-primary mx-1' to='/login' role='button' onClick={handleLogout}>Logout</Link>
+      <Link className='btn btn-danger mx-1' to='/login' role='button' onClick={handleLogout}>Logout</Link>
       }
 
 

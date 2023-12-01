@@ -18,7 +18,7 @@ function Login() {
           });
         
         const json= await response.json();
-        console.log(json)
+        // console.log(json)
 
         if(json.success){
 //save the auth token and redirect
@@ -27,7 +27,7 @@ navigate('/')
         }
         else{
           alert("Incorrect Credentials");
-          setCredentials({email:"",password:""});
+          // setCredentials({email:"",password:""});
         }
     }
 
@@ -36,24 +36,30 @@ navigate('/')
        }
 
   return (
-
-   
-    <div style={{marginTop:"70px"}} className='container '>
+<>
+<div className="container v-100" >
+    <div className="d-flex align-items-center justify-content-center vh-100 ">
+        <div className="shadow p-4 bg-light "> 
+    
       <h2 >Login to continue</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='rounded-lg '>
   <div className="mb-3">
-    <label htmlFor="email" className="form-label">Email address</label>
-    <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" value={credentials.email} onChange={onChange}/>
+    <label htmlFor="email" className="form-label fw-bold">Email address</label>
+    <input type="email" className="form-control border border-success rounded " id="email" name="email" aria-describedby="emailHelp" value={credentials.email} onChange={onChange}/>
     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="form-label">Password</label>
-    <input type="password" className="form-control" name="password" id="password" value={credentials.password} onChange={onChange}/>
+    <label htmlFor="password" className="form-label fw-bold">Password</label>
+    <input type="password" className="form-control border border-success rounded" name="password" id="password" value={credentials.password} onChange={onChange}/>
   </div>
  
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <button type="submit" className="btn btn-success">Login</button>
 </form>
+    
     </div>
+    </div>
+    </div>
+    </>
   )
 }
 
